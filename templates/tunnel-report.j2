@@ -1,0 +1,6 @@
+{% for response in tunnel_stats['results'] %}
++--------------------------------+
+{% set tunnel = response['json']['data'] %}
+{{ tunnel | to_nice_json }}
+{% endfor %}
++--------------------------------+

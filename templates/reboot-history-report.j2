@@ -1,0 +1,16 @@
+Reboot History Report
+
+Date of Report:  {{ reboot_history['date'] }}
+QTY of Reboots:  {{ reboot_history['json']['data'] | length }}
+
+
+{% for occurence in reboot_history['json']['data'] %}
++-----------------------------------------+
+Reboot Time:     {{ occurence['reboot_date_time'] }}
+Reboot Reason:   {{ occurence['reboot_reason'] }}
+Device Hostname: {{ occurence['vdevice-host-name'] }}
+Device IP:       {{ occurence['vdevice-name'] }}
+{% endfor %}
++-----------------------------------------+
+
+{{ reboot_history | to_nice_json }}

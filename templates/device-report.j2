@@ -1,0 +1,11 @@
+{% for response in status['results'] %}
++--------------------------------+
+{% for data in response['json']['data'] %}
+Hostname: {{ data['vdevice-host-name'] }}
+IP Address: {{ data['vdevice-name'] }}
+CPU (IDLE): {{ data['cpu_idle'] }}%
+Free HDD Size: {{ data['disk_avail'] }}
+Free RAM Size: {{ data['mem_free'] }}Kb
+{% endfor %}
+{% endfor %}
++--------------------------------+
