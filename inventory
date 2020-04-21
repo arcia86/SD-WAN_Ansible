@@ -1,6 +1,6 @@
 [all:vars]
-username=admin
-password=admin
+username=
+password=
 
 [sdwan]
-vmanage-1583148.viptela.net
+vmanage-url
